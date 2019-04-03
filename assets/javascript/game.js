@@ -28,7 +28,7 @@ $(document).ready(function() {
     console.log(crystalNumber2);  
     console.log(crystalNumber3); 
     console.log(crystalNumber4);   
-    
+  
     //this number starts hidden
 
 //when user clicks on a crystal, it displays its value
@@ -56,26 +56,40 @@ $(document).ready(function() {
         $("#total-score").text(scoreCounter);
         console.log(scoreCounter);
     });
-    
+
 //if player's score === random number
     //wins++
     $(".crystalImage").on("click", function() {
     if (scoreCounter === randomNumber) {
         wins++;
         alert("You win!");
+        //reset score
         scoreCounter = 0;
         $("#total-score").text(scoreCounter);
         $("#winCount").text(wins);
+        //generate new number
         computerNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         $("#randomNumber").text(computerNumber);
+        //reassign crystal values
+        crystalNumber1 = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+        crystalNumber2 = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+        crystalNumber3 = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+        crystalNumber4 = numberOptions[Math.floor(Math.random() * numberOptions.length)];
     } else if (scoreCounter > randomNumber) {
         losses++;
         alert("You lose!");
+        //reset score
         scoreCounter = 0;
         $("#total-score").text(scoreCounter);
         $("#loseCount").text(losses);
+        //generate new number
         computerNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         $("#randomNumber").text(computerNumber);
+        // reassign crystal values
+        crystalNumber1 = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+        crystalNumber2 = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+        crystalNumber3 = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+        crystalNumber4 = numberOptions[Math.floor(Math.random() * numberOptions.length)];
     }
 });
     //reset total score to 0 , reassign numbers to crystals, and generate new random number
