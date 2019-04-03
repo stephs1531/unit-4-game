@@ -56,6 +56,7 @@ $(document).ready(function() {
         $("#total-score").text(scoreCounter);
         console.log(scoreCounter);
     });
+    
 //if player's score === random number
     //wins++
     $(".crystalImage").on("click", function() {
@@ -65,7 +66,7 @@ $(document).ready(function() {
         scoreCounter = 0;
         $("#total-score").text(scoreCounter);
         $("#winCount").text(wins);
-        computerNumber = randomNumber;
+        computerNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         $("#randomNumber").text(computerNumber);
     } else if (scoreCounter > randomNumber) {
         losses++;
@@ -73,7 +74,7 @@ $(document).ready(function() {
         scoreCounter = 0;
         $("#total-score").text(scoreCounter);
         $("#loseCount").text(losses);
-        computerNumber = randomNumber;
+        computerNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         $("#randomNumber").text(computerNumber);
     }
 });
