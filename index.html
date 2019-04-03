@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
 
     <!-- javascript/jQuery links -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
     <!-- google fonts links -->
@@ -34,10 +34,10 @@
     </div>
 
     <div id="gameContent">
-        <div id="randomNumber"></div>
+        <h4>Number to match: <span id="randomNumber"></span></h4>
         <div id="score">
-            <div id="winCount"></div>
-            <div id="loseCount"></div>
+            <h4>Wins: <div id="winCount"></div></h4>
+            <h4>Losses: <div id="loseCount"></div></h4>
         </div>
         <div id="crystalGroup">
             <img id="pinkCrystal" class="crystalImage" src="assets/images/6142064b37abf2f48237e5f9f57f18e1.jpg">
@@ -45,8 +45,15 @@
             <img id="blueCrystal" class="crystalImage" src="assets/images/51snWRfynML._US500_.jpg">
             <img id="purpleCrystal" class="crystalImage" src="assets/images/crystals.jpg">
         </div>
-        <div id="totalScoreCount"></div>
+
+        <div id="crystals"></div>
+
+        <div id="totalScoreCount">
+            <h4>Your total score is: </h4>
+            <div id="total-score"></div>
+        </div>
     </div>
+
 
 </body>
 </html>
