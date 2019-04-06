@@ -1,3 +1,22 @@
+h1 {
+    font-family: 'Bree Serif', serif;
+    font-weight: 700;
+    color: darkgray;
+    text-align: center;
+    font-size: 80px;
+}
+
+p {
+    font-family: 'Questrial', sans-serif;
+    color: darkgray;
+}
+
+h4 {
+    font-family: 'Bree Serif', serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
 img {
     height: 200px;
     width: 200px;
@@ -5,4 +24,31 @@ img {
 
 #winCount, #loseCount {
     display: inline-block;
+}
+
+.instructions {
+    width: 60%;
+    margin: 0 auto;
+    background-color:purple;
+    padding: 50px;
+}
+
+#gameContent {
+    margin: 0 auto;
+    width: 60%;
+}
+
+#crystalGroup {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#totalScoreCount{
+    background-color: teal;
+    width: 30%;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
 }
